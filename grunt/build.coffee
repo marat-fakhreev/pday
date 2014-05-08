@@ -8,5 +8,4 @@ module.exports = (grunt) ->
         'coffeelint:development'
         'jade:html'
         'copy:development'
-        'svgsprite:development'
       ]

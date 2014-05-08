@@ -7,7 +7,7 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1')
     title P-day
     | <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
-    | <link rel="stylesheet" href="/stylesheets/sprite.css">
+    | <link rel="stylesheet" href="/stylesheets/fontcustom.css">
     | <link rel="stylesheet" href="/stylesheets/style.css">
 
     | <script type='text/javascript' src='/scripts/libs/jquery-2.1.1.min.js'></script>
@@ -20,7 +20,21 @@ html
       .block-color
         .block-inner
           header.header
-            .svg-logo-1
+            .logo
+              div(class='logo-part-one icon-logo-1')
+              div(class='logo-part-two icon-logo-2')
+            ul.social
+              li(class="inst icon-insta")
+              li(class="vk icon-vk")
+              li(class="fb icon-fb")
+            nav
+              ul
+                li
+                  a(href="#") Выступающие
+                li
+                  a(href="#") Партнеры
+                li
+                  a(href="#") О Нас
           .box
             h1
               | Главное практическое мероприятие по интернет-торговле

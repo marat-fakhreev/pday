@@ -1,5 +1,6 @@
 $blueColor = #073f5a
 $blueLightColor = #329ccf
+$greyColor = #878787
 
 html
   margin: 0px auto
@@ -43,9 +44,15 @@ body
     height: 100%
     margin: 0 auto
     box-sizing: border-box
-    padding-top: 105px
+    padding: 105px 0 80px 0
     position: relative
     z-index: 50
+
+    &::after
+      height: 0
+      content: ''
+      display: block
+      clear: both
 
   .box
     width: 100%

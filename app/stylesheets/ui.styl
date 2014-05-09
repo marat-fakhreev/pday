@@ -13,3 +13,38 @@
   bottom: -21px
   left: 50%
   margin: 0 0 0 -86px
+
+.social
+  position: relative
+  height: 100%
+  margin: 10px 0 12px 0
+
+  li
+    float: left
+    width: 16px
+    margin: 0 7px 0 7px
+
+  &::after
+    height: 0
+    content: ''
+    display: block
+    clear: both
+
+.button
+  cursor: pointer
+  margin: 0 15px
+  width: 264px
+  height: 54px
+  line-height: 60px
+  text-align: center
+  text-transform: uppercase
+  border: 3px solid $blueLightColor
+  background-color: #fff
+  color: $blueColor
+  font-weight: 700
+  font-size: 18px
+  float: left
+
+  &:hover
+    background-color: $blueLightColor
+    color: #fff

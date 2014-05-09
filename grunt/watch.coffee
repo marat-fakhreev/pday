@@ -26,6 +26,7 @@ module.exports = (grunt) ->
       'stylus:watch'
       'coffee:watch'
       'coffeelint:watch'
+      'copy:development'
     ]
   production:
     files: []

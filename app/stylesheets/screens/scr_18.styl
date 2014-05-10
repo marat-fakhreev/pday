@@ -1,0 +1,113 @@
+#screen-eighteen
+  background-image: url("../images/kremlin.jpg")
+  background-position: left top
+
+  .block-inner
+    padding: 0
+
+  .form-block
+    margin: 200px auto 0
+    padding: 60px 50px 50px 50px
+    width: 580px
+    background-color: #fff
+    box-sizing: border-box
+    color: $greyFontColor
+
+    h2
+      color: $blueColor
+
+    p
+      font-size: 16px
+
+    form
+      margin: 35px 0 0 0
+
+      .field
+        margin: 0 0 20px 0
+
+      ul
+        &::after
+          content: ''
+          display: block
+          clear: both
+
+        li
+          display: block
+          font-size: 18px
+          height: 40px
+          line-height: 40px
+          border-bottom: 2px solid #dcdcdc
+
+          &:nth-child(1)
+            font-weight: bold
+
+          &:nth-child(2)
+            .count
+              box-sizing: border-box
+              padding-right: 15px
+
+          &:last-child
+            border-bottom: none
+
+          div
+            float: left
+
+          .title
+            width: 160px
+            font-weight: bold
+
+          .cost
+            width: 70px
+
+          .registration
+            width: 150px
+
+          .count
+            width: 100px
+            text-align: right
+            position: relative
+
+          .all
+            width: 100%
+            font-weight: bold
+            text-align: right
+
+          .icon-plus
+          .icon-minus
+            position: absolute
+            top: 19px
+            right: 0px
+            font-size: 12px
+            cursor: pointer
+
+          .icon-minus
+            right: -15px
+
+      label
+        font-size: 18px
+        font-weight: 700
+        display: block
+        margin: 0 0 5px 0
+
+      span
+        margin: 0 0 20px 10px
+
+      input
+        background-color: #dcdcdc
+        border: none
+        width: 100%
+        height: 43px
+        box-sizing: border-box
+        color: $greyFontColor
+        padding: 10px 20px
+        font-size: 18px
+
+      input[type="submit"]
+        cursor: pointer
+        margin: 25px 0 0 0
+        height: 60px
+        background-color: $blueLightColor
+        color: #fff
+        text-transform: uppercase
+        font-size: 16px
+        font-weight: 700

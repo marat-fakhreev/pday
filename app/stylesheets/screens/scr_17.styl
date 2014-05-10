@@ -1,0 +1,31 @@
+#screen-seventeen
+  .devices
+    width: 100%
+    height: 325px
+    margin: 80px 0 50px 0
+    background-size: cover
+    background-image: url("../images/devices.jpg")
+
+  .devices-title
+    text-align: center
+
+  .partners
+    margin: 30px 0 0 0
+    padding: 0 290px
+
+    &::after
+      content: ''
+      display: block
+      clear: both
+
+    .partner-logo
+      padding: 0 10px
+
+    .logo-1
+      @extend #screen-one .header .logo
+
+      .logo-part-one
+        color: $blueLightColor
+
+      .logo-part-two
+        bottom: 0px

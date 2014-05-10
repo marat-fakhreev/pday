@@ -11,10 +11,12 @@ html
     | <link rel="stylesheet" href="/stylesheets/style.css">
 
     | <script type='text/javascript' src='/scripts/libs/jquery-2.1.1.min.js'></script>
+    | <script type='text/javascript' src='/scripts/libs/jquery.easing.1.3.js'></script>
     | <script type='text/javascript' src='/scripts/libs/underscore-min.js'></script>
     //- app scripts
     | <script type='text/javascript' src='/scripts/app.js'></script>
-    | <script type='text/javascript' src='/scripts/views/main.js'></script>
+    | <script type='text/javascript' src='/scripts/models/registration_model.js'></script>
+    | <script type='text/javascript' src='/scripts/views/main_view.js'></script>
 
   body
     section#screen-one(class='block blue-block')
@@ -59,7 +61,7 @@ html
                 span.desc Телефон для справок:
                 div
                   span.count +7 (495) 726-09-39
-            .button-light Регистрация
+            div(class="button-light reg-button") Регистрация
           .scroll-button
             span Прокрутите вниз
             .icon-scroll
@@ -145,7 +147,7 @@ html
         .block-inner
           h3
             | Я уже готов пойти
-          .button-light Регистрация
+          div(class="button-light reg-button") Регистрация
 
 
     section#screen-six(class='block white-block')
@@ -226,7 +228,7 @@ html
         .block-inner
           h3
             | Конечно иду!
-          .button-light Регистрация
+          div(class="button-light reg-button") Регистрация
 
 
     section#screen-nine(class='block white-block')
@@ -251,7 +253,7 @@ html
               .partner
               span Pr.Sare
         .button-block
-          .button Cтать партнерам
+          .button Cтать партнером
           .button Все партнеры
 
 
@@ -320,7 +322,7 @@ html
         h2
           | ЧТо говорят о прошлом мероприятии практика days
         .reviews
-          ul
+          ul#review_list
             li
               .review-item
                 .icon-quote-top
@@ -348,8 +350,17 @@ html
               .review-author
                 span Андрей Хворостов
                 | RetailRocket
+            li
+              .review-item
+                .icon-quote-top
+                .icon-quote-bottom
+                p
+                  | Мероприятие от Бориса и Давлета - тот волшебный пендель, который может получить любой сомневающийся в вопросе "открыть или не открыть свой ИМ". Простые люди, такие же как и все, делятся своей болью и радостью создания магазина. Очень рекомендую к посещению!
+              .review-author
+                span Андрей Хворостов
+                | RetailRocket
           .expander
-            .button Раскрыть все отзывы
+            .button#show_list_button Раскрыть все отзывы
 
 
     section#screen-fourteen(class='block white-block')
@@ -385,7 +396,7 @@ html
           .title
             h2 4900
             span руб
-            .button Зарегистрироваться
+            div(class="reg-button button") Зарегистрироваться
         p
           | Но! До 8 мая стоимость составит —  <b>3800 руб.</b> Для тех, кто уже побывал на прошом меропритяии и для самых быстрых, вместо создания промокодов мы делаем скидку, только первые 2 недели. Успейте зарегистрироваться! <br>Регистрация и резервирование мест на семинар осуществляется по факту поступления оплаты. <br><br> В стоимость участия в Москве входит:
         ul
@@ -422,7 +433,7 @@ html
             .title
               h2 3200
               span руб
-              .button Зарегистрироваться
+              div(class="reg-button button") Зарегистрироваться
             .text
               | После оплаты вам будет отправлен код для просмотра онлайн - трансляции
           p После заполнения регистрационной формы вам будут доступны следующие способы оплаты:
@@ -457,13 +468,13 @@ html
             div(class='logo-part-two icon-logo-2')
 
 
-    section#screen-eighteen(class='block blue-block')
+    section#screen-eighteen(class='block blue-block registration-screen')
       .block-inner
         .form-block
           h2 Регистрация
           p
             | Чтобы зарегистрироваться на это событие, заполните анкету. Информация о Вас будет доступна только организаторам этого события, и больше никому. Поля, отмеченные звездочкой, являются обязательными.
-          form
+          form(id="registration_form")
             ul
               li
                 .title Доступные билеты
@@ -481,16 +492,16 @@ html
                 .all Всего 1
             .field
               label E-Mail:
-              input(type="email")
+              input(type="email" name="E-Mail")
             .field
               label Фамилия:
-              input(type="text")
+              input(type="text" name="Фамилия")
             .field
               label Имя:
-              input(type="text")
+              input(type="text" name="Имя")
             .field
               label Телефон:
-              input(type="tel")
+              input(type="tel" name="Телефон")
             span Подписаться на Дайджест интересных событий TimePad
             input(type="submit" value="Продолжить")
 
@@ -501,6 +512,7 @@ html
         .button Связаться с организатором
         p
           | Остались вопросы? Воспользуйтесь формой «Связаться с организатором» или позвоните нам по телефону <br> +7 (495) 726-09-39. Мы будем рады ответить на все интересующие вас вопросы по мероприятию. <br><br> Да прибудет с вами высокая конверсия и полная корзина заказов! <br> До встречи на мероприятии!
+
 
     section#screen-twenty(class='block blue-block')
       .block-color

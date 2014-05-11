@@ -2,7 +2,16 @@
   .photoalbum
     height: 415px
     width: 50000px
-    background-color: red
+    background-color: $blueColor
+
+    .photoalbum-inner
+      display: inline-block
+      cursor: pointer
+
+      &:active
+        cursor: move
+        cursor: -moz-grabbing
+        cursor: -webkit-grabbing
 
     img
       float: left

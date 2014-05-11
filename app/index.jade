@@ -12,7 +12,8 @@ html
 
     | <script type='text/javascript' src='/scripts/libs/jquery-2.1.1.min.js'></script>
     | <script type='text/javascript' src='/scripts/libs/jquery.easing.1.3.js'></script>
-    | <script type='text/javascript' src='/scripts/libs/underscore-min.js'></script>
+    | <script type='text/javascript' src='/scripts/libs/jquery-ui-1.10.4.custom.js'></script>
+    | <script type='text/javascript' src='/scripts/libs/moment.min.js'></script>
     //- app scripts
     | <script type='text/javascript' src='/scripts/app.js'></script>
     | <script type='text/javascript' src='/scripts/models/registration_model.js'></script>
@@ -36,11 +37,11 @@ html
             nav
               ul
                 li
-                  a(href="#") Выступающие
+                  a(href="#" class="presenters-button") Выступающие
                 li
                   a(href="#") Партнеры
                 li
-                  a(href="#") О Нас
+                  a(href="#" class="about-button") О Нас
           .box
             h1
               | Главное практическое мероприятие по интернет-торговле
@@ -49,14 +50,13 @@ html
             ul
               li
                 span.desc До начала осталось:
-                div
-                  span.count 56
-                  p дней
+                div.days-count
+                  span.count
+                  p
               li
                 span.desc Генеральный партнер:
                 div
                   span.count 56
-                  p дней
               li
                 span.desc Телефон для справок:
                 div
@@ -67,7 +67,7 @@ html
             .icon-scroll
 
 
-    section#screen-two(class='block white-block')
+    section#screen-two(class='block white-block scroll-screen')
       .block-inner
         h3
           | В то время, как многие ходили по различным конференциям, слушали рассказы теоретиков и супер-звезд российского e-commerce, эти 15 предпринимателей работали над своими проектами. 
@@ -162,7 +162,7 @@ html
             | Вы услышите всё!
 
 
-    section#screen-seven(class='block white-block')
+    section#screen-seven(class='block white-block about-screen')
       .block-inner
         h2
           | Организаторы и ведущие мероприятия
@@ -308,12 +308,12 @@ html
         .block-inner
           h2
             | Фотографии с прошлого практика days
-      .photoalbum
-        .photoalbum-inner
-          img(src='../images/photo/LAT_6632.jpg')
-          img(src='../images/photo/LAT_6986.jpg')
-          img(src='../images/photo/LAT_7017.jpg')
-          img(src='../images/photo/LAT_7167.jpg')
+        .photoalbum
+          .photoalbum-inner
+            img(src='../images/photo/LAT_6632.jpg')
+            img(src='../images/photo/LAT_6986.jpg')
+            img(src='../images/photo/LAT_7017.jpg')
+            img(src='../images/photo/LAT_7167.jpg')
 
 
     section#screen-thirteen(class='block white-block')

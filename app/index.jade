@@ -14,12 +14,18 @@ html
     | <script type='text/javascript' src='/scripts/libs/jquery.easing.1.3.js'></script>
     | <script type='text/javascript' src='/scripts/libs/jquery-ui-1.10.4.custom.js'></script>
     | <script type='text/javascript' src='/scripts/libs/moment.min.js'></script>
+    //- additional scripts
+    | <script type="text/javascript" src="//vk.com/js/api/openapi.js?112"></script>
+    | <script type="text/javascript">VK.init({apiId: 6054660, onlyWidgets: true});</script>
+    | <script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version.."; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
     //- app scripts
     | <script type='text/javascript' src='/scripts/app.js'></script>
     | <script type='text/javascript' src='/scripts/models/registration_model.js'></script>
     | <script type='text/javascript' src='/scripts/views/main_view.js'></script>
 
   body
+    #fb-root
+
     section#screen-one(class='block blue-block')
       .block-color
         .block-inner
@@ -29,19 +35,19 @@ html
               div(class='logo-part-two icon-logo-2')
             ul.social
               li
-                a(href="#" class="inst icon-insta")
+                a(href="http://instagram.com/internetpraktika" target="_blank" class="inst icon-insta")
               li
-                a(href="#" class="vk icon-vk")
+                a(href="https://vk.com/public71012625" target="_blank" class="vk icon-vk")
               li
-                a(href="#" class="fb icon-fb")
+                a(href="https://www.facebook.com/praktikadays?ref=hl" target="_blank" class="fb icon-fb")
             nav
               ul
                 li
-                  a(href="#" class="presenters-button") Выступающие
+                  a(class="presenters-button") Выступающие
                 li
-                  a(href="#") Партнеры
+                  a(href="/partners") Партнеры
                 li
-                  a(href="#" class="about-button") О Нас
+                  a(class="about-button") О Нас
           .box
             h1
               | Главное практическое мероприятие по интернет-торговле
@@ -173,11 +179,11 @@ html
             a(href="http://www.rezedasuleyman.com/") http://www.rezedasuleyman.com/
             ul.social
               li
-                a(href="#" class="inst icon-insta")
+                a(href="http://instagram.com/davlet" target="_blank" class="inst icon-insta")
               li
-                a(href="#" class="vk icon-vk")
+                a(href="https://vk.com/id184504188" target="_blank" class="vk icon-vk")
               li
-                a(href="#" class="fb icon-fb")
+                a(href="https://www.facebook.com/s.davlet" target="_blank" class="fb icon-fb")
             p
               | Бывший владелец сети интернет-магазинов посуды. Создал сеть из 18 брендовых сайтов, развил ее и успешно продал. Возглавлял интернет-магазин Групона. Создал с нуля бренд, лидирующий на рынке мусульманской одежды в России, наладил производство и создал сеть розничных магазинов.
           li
@@ -186,11 +192,11 @@ html
             a(href="http://preboris.ru/") http://preboris.ru/
             ul.social
               li
-                a(href="#" class="inst icon-insta")
+                a(href="http://instagram.com/preboris" target="_blank" class="inst icon-insta")
               li
-                a(href="#" class="vk icon-vk")
+                a(href="https://vk.com/preboris" target="_blank" class="vk icon-vk")
               li
-                a(href="#" class="fb icon-fb")
+                a(href="https://www.facebook.com/preboris?fref=ts" target="_blank" class="fb icon-fb")
             p
               | В разное время Борис являлся создателем, владельцем или совладельцем компаний: ForOffice.ru — крупнейшего поставщика печатного и полиграфического оборудования, Швейные Технологии SewTech.ru, Mir-Karcher.ru — крупнейшего интернет-магазина оборудования Karcher, Лайф Кафе, производства пиломатериалов Лесорубка.ру, типографии ZiPrint, интернет-магазина Genergy.ru, сервисной компании Воздушник, онлайн b2b-портала Rusmarket.ru, крупнейшего московского свадебного салона, рекламного агентства Новые Линии Продвижения, поставщика печатного 3D оборудования 3dplotter.ru, многих других различных интернет-магазинов и онлайн-проектов
         h2
@@ -236,24 +242,24 @@ html
           | Партнеры мероприятия
         ul
           li
-            a(href="#")
+            a(href="http://retailrocket.ru/" target="blank")
               .partner
               span Retail Rocket
           li
-            a(href="#")
+            a(href="#" target="blank")
               .partner
               span Flocktory
           li
-            a(href="#")
+            a(href="http://www.insales.ru/" target="blank")
               .partner
               span InSales
           li
-            a(href="#")
+            a(href="#" target="blank")
               .partner
               span Pr.Sare
         .button-block
-          .button Cтать партнером
-          .button Все партнеры
+          a(class="button" href="/partners") Cтать партнером
+          a(class="button" href="/partners") Все партнеры
 
 
     section#screen-ten(class='block blue-block')
@@ -397,7 +403,7 @@ html
             span руб
             div(class="reg-button button") Зарегистрироваться
         p
-          | Но! До 8 мая стоимость составит —  <b>3800 руб.</b> Для тех, кто уже побывал на прошом меропритяии и для самых быстрых, вместо создания промокодов мы делаем скидку, только первые 2 недели. Успейте зарегистрироваться! <br>Регистрация и резервирование мест на семинар осуществляется по факту поступления оплаты. <br><br> В стоимость участия в Москве входит:
+          | В стоимость участия в Москве входит:
         ul
           li
             div(class="icon icon-icon-5")
@@ -469,40 +475,41 @@ html
 
     section#screen-eighteen(class='block blue-block registration-screen')
       .block-inner
-        .form-block
+        div(id="registration_form" class="form-block")
           h2 Регистрация
-          p
-            | Чтобы зарегистрироваться на это событие, заполните анкету. Информация о Вас будет доступна только организаторам этого события, и больше никому. Поля, отмеченные звездочкой, являются обязательными.
-          form(id="registration_form")
-            ul
-              li
-                .title Доступные билеты
-                .cost Цена
-                .registration Закрытие регистрации
-                .count Кол-во
-              li
-                .title Входной билет
-                .cost 500р
-                .registration через 4 дня
-                .count 1
-                  .icon-plus
-                  .icon-minus
-              li
-                .all Всего 1
-            .field
-              label E-Mail:
-              input(type="email" name="E-Mail")
-            .field
-              label Фамилия:
-              input(type="text" name="Фамилия")
-            .field
-              label Имя:
-              input(type="text" name="Имя")
-            .field
-              label Телефон:
-              input(type="tel" name="Телефон")
-            span Подписаться на Дайджест интересных событий TimePad
-            input(type="submit" value="Продолжить")
+          | <script defer="defer" data-timepad-widget-v2="event_register" data-timepad-customized="3231" src="//timepad.ru/js/tpwf/loader/min/loader.js">(function(){return {"event":{"id":"119992","org":"22951","subdomain":"praktikaclub"}}; })();</script>
+          //- p
+          //-   | Чтобы зарегистрироваться на это событие, заполните анкету. Информация о Вас будет доступна только организаторам этого события, и больше никому. Поля, отмеченные звездочкой, являются обязательными.
+          //- form(id="registration_form")
+          //-   ul
+          //-     li
+          //-       .title Доступные билеты
+          //-       .cost Цена
+          //-       .registration Закрытие регистрации
+          //-       .count Кол-во
+          //-     li
+          //-       .title Входной билет
+          //-       .cost 500р
+          //-       .registration через 4 дня
+          //-       .count 1
+          //-         .icon-plus
+          //-         .icon-minus
+          //-     li
+          //-       .all Всего 1
+          //-   .field
+          //-     label E-Mail:
+          //-     input(type="email" name="E-Mail")
+          //-   .field
+          //-     label Фамилия:
+          //-     input(type="text" name="Фамилия")
+          //-   .field
+          //-     label Имя:
+          //-     input(type="text" name="Имя")
+          //-   .field
+          //-     label Телефон:
+          //-     input(type="tel" name="Телефон")
+          //-   span Подписаться на Дайджест интересных событий TimePad
+          //-   input(type="submit" value="Продолжить")
 
 
     section#screen-nineteen(class='block white-block')
@@ -523,6 +530,14 @@ html
             .icon-quote-bottom
             p
               | Ставлю себе напоминание, что иду на главное практическое мероприятие по <br> интернет-торговле "ПрактикаDays", которое пройдет 21 июня. Да прибудет с нами <br> высокая конверсия. http://praktikaclub.timepad.ru/event/103158/
+          .social-comment-block
+            //- vk module
+            div.vk
+              div#vk_comments
+              | <script type="text/javascript">VK.Widgets.Comments("vk_comments", {limit: 20, width: "520", attach: "*"});</script>
+            //- fb module
+            div.fb
+              | <div class="fb-comments" data-href="http://example.com/comments" data-numposts="5" data-colorscheme="light"></div>
           .partners
             div(class="partner-logo logo-1")
               div(class='logo-part-one icon-logo-1')

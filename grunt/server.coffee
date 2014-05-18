@@ -3,6 +3,6 @@ module.exports = (grunt) ->
     if target is 'development'
       grunt.task.run [
         'connect:development'
-        'configureProxies:server'
+        # 'configureProxies:server'
         'watch:development'
       ]

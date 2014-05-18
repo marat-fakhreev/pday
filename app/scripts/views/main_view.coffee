@@ -36,7 +36,7 @@ class App.Views.MainView
     @ui.presentersButton.on 'click', (=> @moveToElem(@ui.aboutScreen, 1000))
     @ui.scrollButton.on 'click', (=> @moveToElem(@ui.scrollScreen, 0))
     @ui.reviewShowButton.on 'click', @showReviews
-    @ui.form.on 'submit', @registrationForm
+    # @ui.form.on 'submit', @registrationForm
 
   moveToElem: (element, height) ->
     @ui.body.animate(scrollTop: @_getFromTop(element, height), DURATION, 'easeInOutCirc')
@@ -68,7 +68,7 @@ class App.Views.MainView
       alert('Пожалуйста заполните все поля!')
 
   _getFromTop: (element, height) ->
-    eleent.offset().top + height
+    element.offset().top + height
 
   _setDate: ->
     targetDate = moment(DATE)

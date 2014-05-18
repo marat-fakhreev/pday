@@ -6,3 +6,7 @@ module.exports = (grunt) ->
       { expand: true, cwd: '<%= grunt.appDir %>/stylesheets', dest: '<%= grunt.publicDir %>/stylesheets', src: '*.css' }
       { expand: true, cwd: '<%= grunt.appDir %>/scripts/libs', dest: '<%= grunt.publicDir %>/scripts/libs', src: '**' }
     ]
+  production:
+    files: [
+      { expand: true, cwd: '<%= grunt.publicDir %>', dest: '<%= grunt.publicDir %>/../../pday-test', src: '**' }
+    ]

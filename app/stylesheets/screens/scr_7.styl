@@ -57,21 +57,44 @@
       width: 100%
       border-bottom: 2px solid $greyColor
 
+      &::after
+        content: ''
+        display: block
+        clear: both
+
       &:last-child
         border-bottom: none
         padding: 80px 0 0 0
 
       &:nth-child(1)
         .circle
-          background-image: url('../images/persons/1.jpg')
+          background-image: url('../images/presenters/a_sokolov.jpg')
+        .logo
+          background-image: url('../images/logos/1.jpg')
 
       &:nth-child(2)
         .circle
-          background-image: url('../images/persons/2.jpg')
+          background-image: url('../images/presenters/a_shmiganovskaya.jpg')
+        .logo
+          background-image: url('../images/logos/2.jpg')
 
       &:nth-child(3)
         .circle
-          background-image: url('../images/persons/1.jpg')
+          background-image: url('../images/presenters/a_muzika.jpg')
+        .logo
+          background-image: url('../images/logos/3.jpg')
+
+      &:nth-child(4)
+        .circle
+          background-image: url('../images/presenters/d_kolosov.jpg')
+        .logo
+          background-image: url('../images/logos/4.jpg')
+
+      &:nth-child(5)
+        .circle
+          background-image: url('../images/presenters/a_artishev.jpg')
+        .logo
+          background-image: url('../images/logos/5.jpg')
 
       .circle-block
         width: 240px
@@ -88,6 +111,14 @@
           margin: 0 0 20px -120px
           background-position: center 0px
           background-size: cover
+
+        .logo
+          width: auto
+          height: 60px
+          max-width: 207px
+          background-position: center 0px
+          background-repeat: no-repeat
+          background-size: contain
 
       h4
         text-transform: uppercase

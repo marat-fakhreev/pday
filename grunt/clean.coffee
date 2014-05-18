@@ -3,6 +3,3 @@ module.exports = (grunt) ->
     '<%= grunt.publicDir %>/**/*'
     'access_logs.db'
   ]
-  production: [
-    '<%= grunt.productionDir %>/**/*'
-  ]

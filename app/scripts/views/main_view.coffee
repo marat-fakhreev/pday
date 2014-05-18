@@ -1,7 +1,7 @@
 class App.Views.MainView
-  DURATION = 1500
+  MOVING_DURATION = 1500
   LIST_LENGTH = 3
-  HEIGHT = 120
+  HEIGHT = 0
   SHORT_HEIGHT = 0
   DATE = [2014, 5, 21]
 
@@ -39,17 +39,17 @@ class App.Views.MainView
     # @ui.form.on 'submit', @registrationForm
 
   moveToElem: (element, height) ->
-    @ui.body.animate(scrollTop: @_getFromTop(element, height), DURATION, 'easeInOutCirc')
+    @ui.body.animate(scrollTop: @_getFromTop(element, height), MOVING_DURATION, 'easeInOutCirc')
 
   showReviews: =>
     @ui.reviewShowButton.toggleClass('active')
 
     if @ui.reviewShowButton.hasClass('active')
       @ui.reviewShowButton.html('Скрыть все отзывы')
-      @ui.reviewList.animate(height: HEIGHT + 20, 300)
+      @ui.reviewList.animate(height: HEIGHT, 700)
     else
       @ui.reviewShowButton.html('Раскрыть все отзывы')
-      @ui.reviewList.animate(height: SHORT_HEIGHT, 300)
+      @ui.reviewList.animate(height: SHORT_HEIGHT, 700)
 
   registrationForm: (event) =>
     event.preventDefault()
@@ -90,7 +90,7 @@ class App.Views.MainView
     itter = 1
 
     @ui.reviewListItem.each ->
-      HEIGHT += $(@).height()
+      HEIGHT += $(@).height() + 40
       SHORT_HEIGHT = HEIGHT if itter is LIST_LENGTH
       itter++
 

@@ -7,6 +7,13 @@
 
       li
         margin: 0 0 40px 0
+        position: relative
+        clear: both
+
+        &::after
+          content: ''
+          display: block
+          clear: both
 
         .review-item
           box-sizing: border-box
@@ -14,6 +21,7 @@
           padding: 35px 45px
           border: 4px solid $blueLightColor
           position: relative
+          background-color: #fff
 
         .review-author
           margin: 5px 0 0 0
@@ -21,7 +29,7 @@
           font-size: 18px
           color: #3b3b3b
 
-          span
+          a
             font-size: inherit
             text-decoration: underline
             color: $blueColor

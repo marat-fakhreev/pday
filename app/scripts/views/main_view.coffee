@@ -67,13 +67,15 @@ class App.Views.MainView
         ITTER--
     else if self.hasClass('right-button')
       if ITTER < @count - 2
-        WIDTH += @ui.img.eq(ITTER).width()
+        if ITTER is @count - 3
+          WIDTH += $(document).width() - @ui.img.eq(-1).width() - @ui.img.eq(-2).width()
+        else
+          WIDTH += @ui.img.eq(ITTER).width()
         ITTER++
 
-    if WIDTH > MAX_WIDTH
-      @ui.photoalbumInner.stop().animate('left': -MAX_WIDTH, 300)
-    else
-      @ui.photoalbumInner.stop().animate('left': -WIDTH, 300)
+    console.log ITTER
+
+    @ui.photoalbumInner.stop().animate('left': -WIDTH, 300)
 
   registrationForm: (event) =>
     event.preventDefault()
@@ -127,3 +129,4 @@ class App.Views.MainView
       width += $(@).width()
 
     MAX_WIDTH = width - $(document).width()
+    console.log MAX_WIDTH

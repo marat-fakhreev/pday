@@ -11,7 +11,7 @@
 
   .partners
     margin: 30px 0 0 0
-    padding: 0 290px
+    padding: 0 286px
 
     &::after
       content: ''
@@ -19,7 +19,7 @@
       clear: both
 
     .partner-logo
-      padding: 0 10px
+      padding: 0 12px
 
     .logo-1
       @extend #screen-one .header .logo
@@ -30,3 +30,26 @@
       .logo-part-two
         bottom: 0px
         right: 35px
+
+    .logo-2
+      position: relative
+      width: 170px
+      height: 100%
+      line-height: 55px
+      float: left
+      @extend #screen-one .payu
+
+      .payu-part-one
+        color: $blueColor
+        font-size: 30px
+
+      .payu-part-two
+        color: $blueLightColor
+        font-size: 30px
+        left: 103px
+
+      span
+        font-size: 18px
+        color $blueColor
+        position: relative
+        top: -27px

@@ -160,7 +160,9 @@
       [data-icon]:before { content: attr(data-icon); }
 
       [data-icon]:before,
-      .icon-clock:before,
+      .icon-PUlogo:before,
+.icon-PUlogob:before,
+.icon-clock:before,
 .icon-clock-in:before,
 .icon-fb:before,
 .icon-icon-1:before,
@@ -198,30 +200,32 @@
   font-smoothing: antialiased;
       }
 
-      .icon-clock:before { content: "\f100"; }
-.icon-clock-in:before { content: "\f101"; }
-.icon-fb:before { content: "\f102"; }
-.icon-icon-1:before { content: "\f103"; }
-.icon-icon-2:before { content: "\f104"; }
-.icon-icon-3:before { content: "\f105"; }
-.icon-icon-4:before { content: "\f106"; }
-.icon-icon-5:before { content: "\f107"; }
-.icon-icon-6:before { content: "\f108"; }
-.icon-icon-7:before { content: "\f109"; }
-.icon-icon-8:before { content: "\f10a"; }
-.icon-icon-9:before { content: "\f10b"; }
-.icon-icon-circle:before { content: "\f10c"; }
-.icon-insta:before { content: "\f10d"; }
-.icon-logo-1:before { content: "\f10e"; }
-.icon-logo-2:before { content: "\f10f"; }
-.icon-minus:before { content: "\f110"; }
-.icon-person:before { content: "\f111"; }
-.icon-pin:before { content: "\f112"; }
-.icon-plus:before { content: "\f113"; }
-.icon-quote-bottom:before { content: "\f114"; }
-.icon-quote-top:before { content: "\f115"; }
-.icon-scroll:before { content: "\f116"; }
-.icon-vk:before { content: "\f117"; }
+      .icon-PUlogo:before { content: "\f100"; }
+.icon-PUlogob:before { content: "\f101"; }
+.icon-clock:before { content: "\f102"; }
+.icon-clock-in:before { content: "\f103"; }
+.icon-fb:before { content: "\f104"; }
+.icon-icon-1:before { content: "\f105"; }
+.icon-icon-2:before { content: "\f106"; }
+.icon-icon-3:before { content: "\f107"; }
+.icon-icon-4:before { content: "\f108"; }
+.icon-icon-5:before { content: "\f109"; }
+.icon-icon-6:before { content: "\f10a"; }
+.icon-icon-7:before { content: "\f10b"; }
+.icon-icon-8:before { content: "\f10c"; }
+.icon-icon-9:before { content: "\f10d"; }
+.icon-icon-circle:before { content: "\f10e"; }
+.icon-insta:before { content: "\f10f"; }
+.icon-logo-1:before { content: "\f110"; }
+.icon-logo-2:before { content: "\f111"; }
+.icon-minus:before { content: "\f112"; }
+.icon-person:before { content: "\f113"; }
+.icon-pin:before { content: "\f114"; }
+.icon-plus:before { content: "\f115"; }
+.icon-quote-bottom:before { content: "\f116"; }
+.icon-quote-top:before { content: "\f117"; }
+.icon-scroll:before { content: "\f118"; }
+.icon-vk:before { content: "\f119"; }
     </style>
 
     <!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -237,10 +241,36 @@
   <body class="characters-off">
     <div id="page" class="container">
       <header>
-        <h1>fontcustom contains 24 glyphs:</h1>
+        <h1>fontcustom contains 26 glyphs:</h1>
         <a onclick="toggleCharacters(); return false;" href="#">Toggle Preview Characters</a>
       </header>
 
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="icon-PUlogo" class="icon-PUlogo"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="icon-PUlogo" class="icon-PUlogo"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="icon-PUlogo" class="icon-PUlogo"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="icon-PUlogo" class="icon-PUlogo"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="icon-PUlogo" class="icon-PUlogo"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="icon-PUlogo" class="icon-PUlogo"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="icon-PUlogo" class="icon-PUlogo"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="icon-PUlogo" class="icon-PUlogo"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="icon-PUlogo" class="icon-PUlogo"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="icon-PUlogo" class="icon-PUlogo"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-PUlogo" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf100;" />
+        </div>
+      </div>
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="icon-PUlogob" class="icon-PUlogob"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="icon-PUlogob" class="icon-PUlogob"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="icon-PUlogob" class="icon-PUlogob"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="icon-PUlogob" class="icon-PUlogob"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="icon-PUlogob" class="icon-PUlogob"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="icon-PUlogob" class="icon-PUlogob"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="icon-PUlogob" class="icon-PUlogob"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="icon-PUlogob" class="icon-PUlogob"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="icon-PUlogob" class="icon-PUlogob"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="icon-PUlogob" class="icon-PUlogob"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-PUlogob" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf101;" />
+        </div>
+      </div>
       
       <div class="glyph">
         <div class="preview-glyphs">
@@ -251,7 +281,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-clock" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf100;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf102;" />
         </div>
       </div>
       
@@ -264,7 +294,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-clock-in" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf101;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf103;" />
         </div>
       </div>
       
@@ -277,7 +307,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-fb" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf102;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf104;" />
         </div>
       </div>
       
@@ -290,7 +320,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-icon-1" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf103;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf105;" />
         </div>
       </div>
       
@@ -303,7 +333,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-icon-2" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf104;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf106;" />
         </div>
       </div>
       
@@ -316,7 +346,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-icon-3" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf105;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf107;" />
         </div>
       </div>
       
@@ -329,7 +359,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-icon-4" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf106;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf108;" />
         </div>
       </div>
       
@@ -342,7 +372,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-icon-5" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf107;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf109;" />
         </div>
       </div>
       
@@ -355,7 +385,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-icon-6" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf108;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf10a;" />
         </div>
       </div>
       
@@ -368,7 +398,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-icon-7" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf109;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf10b;" />
         </div>
       </div>
       
@@ -381,7 +411,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-icon-8" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf10a;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf10c;" />
         </div>
       </div>
       
@@ -394,7 +424,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-icon-9" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf10b;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf10d;" />
         </div>
       </div>
       
@@ -407,7 +437,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-icon-circle" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf10c;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf10e;" />
         </div>
       </div>
       
@@ -420,7 +450,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-insta" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf10d;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf10f;" />
         </div>
       </div>
       
@@ -433,7 +463,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-logo-1" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf10e;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf110;" />
         </div>
       </div>
       
@@ -446,7 +476,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-logo-2" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf10f;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf111;" />
         </div>
       </div>
       
@@ -459,7 +489,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-minus" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf110;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf112;" />
         </div>
       </div>
       
@@ -472,7 +502,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-person" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf111;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf113;" />
         </div>
       </div>
       
@@ -485,7 +515,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-pin" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf112;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf114;" />
         </div>
       </div>
       
@@ -498,7 +528,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-plus" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf113;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf115;" />
         </div>
       </div>
       
@@ -511,7 +541,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-quote-bottom" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf114;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf116;" />
         </div>
       </div>
       
@@ -524,7 +554,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-quote-top" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf115;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf117;" />
         </div>
       </div>
       
@@ -537,7 +567,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-scroll" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf116;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf118;" />
         </div>
       </div>
       
@@ -550,7 +580,7 @@
         </div>
         <div class="usage">
           <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-vk" />
-          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf117;" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf119;" />
         </div>
       </div>
       

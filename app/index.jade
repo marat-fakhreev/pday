@@ -67,8 +67,9 @@ html
                   p
               li
                 span.desc Генеральный партнер:
-                div
-                  span.count 56
+                .payu
+                  div(class='payu-part-one icon-PUlogo')
+                  div(class='payu-part-two icon-PUlogob')
               li
                 span.desc Телефон для справок:
                 div
@@ -396,6 +397,8 @@ html
           h2
             | Фотографии с прошлого практика days
         .photoalbum
+          div(class="p-button left-button")
+          div(class="p-button right-button")
           .photoalbum-inner
             img(src='../images/photo/1.jpg')
             img(src='../images/photo/2.jpg')
@@ -625,7 +628,7 @@ html
             | Стоимость онлайн участия <br> в мероприятии:
           .box
             .title
-              h2 3200
+              h2 2900
               span руб
               div(class="reg-button button") Зарегистрироваться
             .text
@@ -662,10 +665,10 @@ html
           div(class="partner-logo logo-1")
             div(class='logo-part-one icon-logo-1')
             div(class='logo-part-two icon-logo-2')
-          div(class="partner-logo logo-1")
-            div(class='logo-part-one icon-logo-1')
-            div(class='logo-part-two icon-logo-2')
-
+          div(class="partner-logo logo-2")
+            div(class='payu-part-one icon-PUlogo')
+            div(class='payu-part-two icon-PUlogob')
+            span Официальный партнер
 
     section#screen-eighteen(class='block blue-block registration-screen')
       .svg-section
@@ -679,38 +682,6 @@ html
         div(id="registration_form" class="form-block")
           h2 Регистрация
           | <script defer="defer" data-timepad-widget-v2="event_register" data-timepad-customized="3231" src="//timepad.ru/js/tpwf/loader/min/loader.js">(function(){return {"event":{"id":"119992","org":"22951","subdomain":"praktikaclub"}}; })();</script>
-          //- p
-          //-   | Чтобы зарегистрироваться на это событие, заполните анкету. Информация о Вас будет доступна только организаторам этого события, и больше никому. Поля, отмеченные звездочкой, являются обязательными.
-          //- form(id="registration_form")
-          //-   ul
-          //-     li
-          //-       .title Доступные билеты
-          //-       .cost Цена
-          //-       .registration Закрытие регистрации
-          //-       .count Кол-во
-          //-     li
-          //-       .title Входной билет
-          //-       .cost 500р
-          //-       .registration через 4 дня
-          //-       .count 1
-          //-         .icon-plus
-          //-         .icon-minus
-          //-     li
-          //-       .all Всего 1
-          //-   .field
-          //-     label E-Mail:
-          //-     input(type="email" name="E-Mail")
-          //-   .field
-          //-     label Фамилия:
-          //-     input(type="text" name="Фамилия")
-          //-   .field
-          //-     label Имя:
-          //-     input(type="text" name="Имя")
-          //-   .field
-          //-     label Телефон:
-          //-     input(type="tel" name="Телефон")
-          //-   span Подписаться на Дайджест интересных событий TimePad
-          //-   input(type="submit" value="Продолжить")
 
 
     section#screen-nineteen(class='block white-block')
@@ -741,7 +712,7 @@ html
             .icon-quote-bottom
             p
               | Ставлю себе напоминание, что иду на главное практическое мероприятие по <br> интернет-торговле "ПрактикаDays", которое пройдет 21 июня. Да прибудет с нами <br> высокая конверсия. http://praktikaclub.timepad.ru/event/103158/
-          .social-comment-block
+          //- .social-comment-block
             //- vk module
             div.vk
               div#vk_comments

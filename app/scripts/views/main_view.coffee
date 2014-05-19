@@ -3,6 +3,8 @@ class App.Views.MainView
   LIST_LENGTH = 3
   HEIGHT = 0
   SHORT_HEIGHT = 0
+  ITTER = 0
+  WIDTH = 0
   DATE = [2014, 5, 21]
 
   constructor: ->
@@ -11,6 +13,7 @@ class App.Views.MainView
     @_initReviewList()
     @_setDate()
     @_initPhotoalbum()
+    @count = @ui.photoalbumInner.find('img').length
 
   initUi: ->
     @ui =
@@ -29,6 +32,8 @@ class App.Views.MainView
       reviewListItem: $('#review_list li')
       daysCount: $('.days-count')
       photoalbumInner: $('.photoalbum-inner')
+      img: $('.photoalbum-inner img')
+      photoBtn: $('.p-button')
 
   events: ->
     @ui.regButton.on 'click', (=> @moveToElem(@ui.regScreen, 150))
@@ -36,6 +41,7 @@ class App.Views.MainView
     @ui.presentersButton.on 'click', (=> @moveToElem(@ui.aboutScreen, 1000))
     @ui.scrollButton.on 'click', (=> @moveToElem(@ui.scrollScreen, 0))
     @ui.reviewShowButton.on 'click', @showReviews
+    @ui.photoBtn.on 'click', @slidePhoto
     # @ui.form.on 'submit', @registrationForm
 
   moveToElem: (element, height) ->
@@ -50,6 +56,23 @@ class App.Views.MainView
     else
       @ui.reviewShowButton.html('Раскрыть все отзывы')
       @ui.reviewList.animate(height: SHORT_HEIGHT, 700)
+
+  slidePhoto: (event) =>
+    self = $(event.currentTarget)
+    width = 0
+
+    if self.hasClass('left-button')
+      ITTER-- if ITTER > 0
+    else if self.hasClass('right-button')
+      ITTER++ if ITTER < @count
+
+    for i in [0...ITTER]
+      width += @ui.img.eq(i).width()
+
+    if width > WIDTH
+      @ui.photoalbumInner.stop().animate('left': -WIDTH, 300)
+    else
+      @ui.photoalbumInner.stop().animate('left': -width, 300)
 
   registrationForm: (event) =>
     event.preventDefault()
@@ -97,10 +120,14 @@ class App.Views.MainView
     @ui.reviewList.height(SHORT_HEIGHT)
 
   _initPhotoalbum: ->
-    width = @ui.photoalbumInner.width() - $(document).width()
+    @ui.img.each ->
+      WIDTH += $(@).width()
 
-    @ui.photoalbumInner.draggable axis: 'x', stop: (event, ui) =>
-      if ui.position.left > 0
-        @ui.photoalbumInner.animate('left': '0px', 300)
-      else if ui.position.left < -width
-        @ui.photoalbumInner.animate('left': -width, 300)
+    WIDTH = WIDTH - $(document).width()
+    # width = @ui.photoalbumInner.width() - $(document).width()
+
+    # @ui.photoalbumInner.draggable axis: 'x', stop: (event, ui) =>
+    #   if ui.position.left > 0
+    #     @ui.photoalbumInner.animate('left': '0px', 300)
+    #   else if ui.position.left < -width
+    #     @ui.photoalbumInner.animate('left': -width, 300)

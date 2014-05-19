@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "0297748a98c1fdb27c01e6ba5355a91ea822d9570f6f16a577cb226ca65c38f4",
-    "current": "0297748a98c1fdb27c01e6ba5355a91ea822d9570f6f16a577cb226ca65c38f4"
+    "previous": "0997b55fe32c9a298ef05b33a492cc19e92a1657dfd125e2e728b79b66ee8928",
+    "current": "0997b55fe32c9a298ef05b33a492cc19e92a1657dfd125e2e728b79b66ee8928"
   },
   "fonts": [
     "app/fonts/fontcustom.ttf",
@@ -10,100 +10,108 @@
     "app/fonts/fontcustom.eot"
   ],
   "glyphs": {
-    "clock": {
+    "PUlogo": {
       "codepoint": 61696,
+      "source": "app/svgs/PUlogo.svg"
+    },
+    "PUlogob": {
+      "codepoint": 61697,
+      "source": "app/svgs/PUlogob.svg"
+    },
+    "clock": {
+      "codepoint": 61698,
       "source": "app/svgs/clock.svg"
     },
     "clock-in": {
-      "codepoint": 61697,
+      "codepoint": 61699,
       "source": "app/svgs/clock-in.svg"
     },
     "fb": {
-      "codepoint": 61698,
+      "codepoint": 61700,
       "source": "app/svgs/fb.svg"
     },
     "icon-1": {
-      "codepoint": 61699,
+      "codepoint": 61701,
       "source": "app/svgs/icon-1.svg"
     },
     "icon-2": {
-      "codepoint": 61700,
+      "codepoint": 61702,
       "source": "app/svgs/icon-2.svg"
     },
     "icon-3": {
-      "codepoint": 61701,
+      "codepoint": 61703,
       "source": "app/svgs/icon-3.svg"
     },
     "icon-4": {
-      "codepoint": 61702,
+      "codepoint": 61704,
       "source": "app/svgs/icon-4.svg"
     },
     "icon-5": {
-      "codepoint": 61703,
+      "codepoint": 61705,
       "source": "app/svgs/icon-5.svg"
     },
     "icon-6": {
-      "codepoint": 61704,
+      "codepoint": 61706,
       "source": "app/svgs/icon-6.svg"
     },
     "icon-7": {
-      "codepoint": 61705,
+      "codepoint": 61707,
       "source": "app/svgs/icon-7.svg"
     },
     "icon-8": {
-      "codepoint": 61706,
+      "codepoint": 61708,
       "source": "app/svgs/icon-8.svg"
     },
     "icon-9": {
-      "codepoint": 61707,
+      "codepoint": 61709,
       "source": "app/svgs/icon-9.svg"
     },
     "icon-circle": {
-      "codepoint": 61708,
+      "codepoint": 61710,
       "source": "app/svgs/icon-circle.svg"
     },
     "insta": {
-      "codepoint": 61709,
+      "codepoint": 61711,
       "source": "app/svgs/insta.svg"
     },
     "logo-1": {
-      "codepoint": 61710,
+      "codepoint": 61712,
       "source": "app/svgs/logo-1.svg"
     },
     "logo-2": {
-      "codepoint": 61711,
+      "codepoint": 61713,
       "source": "app/svgs/logo-2.svg"
     },
     "minus": {
-      "codepoint": 61712,
+      "codepoint": 61714,
       "source": "app/svgs/minus.svg"
     },
     "person": {
-      "codepoint": 61713,
+      "codepoint": 61715,
       "source": "app/svgs/person.svg"
     },
     "pin": {
-      "codepoint": 61714,
+      "codepoint": 61716,
       "source": "app/svgs/pin.svg"
     },
     "plus": {
-      "codepoint": 61715,
+      "codepoint": 61717,
       "source": "app/svgs/plus.svg"
     },
     "quote-bottom": {
-      "codepoint": 61716,
+      "codepoint": 61718,
       "source": "app/svgs/quote-bottom.svg"
     },
     "quote-top": {
-      "codepoint": 61717,
+      "codepoint": 61719,
       "source": "app/svgs/quote-top.svg"
     },
     "scroll": {
-      "codepoint": 61718,
+      "codepoint": 61720,
       "source": "app/svgs/scroll.svg"
     },
     "vk": {
-      "codepoint": 61719,
+      "codepoint": 61721,
       "source": "app/svgs/vk.svg"
     }
   },

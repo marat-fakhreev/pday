@@ -23,6 +23,8 @@
 [data-icon]:before { content: attr(data-icon); }
 
 [data-icon]:before,
+.icon-PUlogo:before,
+.icon-PUlogob:before,
 .icon-clock:before,
 .icon-clock-in:before,
 .icon-fb:before,
@@ -52,7 +54,7 @@
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
-  line-height: inherit;
+  line-height: 1;
   text-decoration: inherit;
   text-rendering: optimizeLegibility;
   text-transform: none;
@@ -61,27 +63,29 @@
   font-smoothing: antialiased;
 }
 
-.icon-clock:before { content: "\f100"; }
-.icon-clock-in:before { content: "\f101"; }
-.icon-fb:before { content: "\f102"; }
-.icon-icon-1:before { content: "\f103"; }
-.icon-icon-2:before { content: "\f104"; }
-.icon-icon-3:before { content: "\f105"; }
-.icon-icon-4:before { content: "\f106"; }
-.icon-icon-5:before { content: "\f107"; }
-.icon-icon-6:before { content: "\f108"; }
-.icon-icon-7:before { content: "\f109"; }
-.icon-icon-8:before { content: "\f10a"; }
-.icon-icon-9:before { content: "\f10b"; }
-.icon-icon-circle:before { content: "\f10c"; }
-.icon-insta:before { content: "\f10d"; }
-.icon-logo-1:before { content: "\f10e"; }
-.icon-logo-2:before { content: "\f10f"; }
-.icon-minus:before { content: "\f110"; }
-.icon-person:before { content: "\f111"; }
-.icon-pin:before { content: "\f112"; }
-.icon-plus:before { content: "\f113"; }
-.icon-quote-bottom:before { content: "\f114"; }
-.icon-quote-top:before { content: "\f115"; }
-.icon-scroll:before { content: "\f116"; }
-.icon-vk:before { content: "\f117"; }
+.icon-PUlogo:before { content: "\f100"; }
+.icon-PUlogob:before { content: "\f101"; }
+.icon-clock:before { content: "\f102"; }
+.icon-clock-in:before { content: "\f103"; }
+.icon-fb:before { content: "\f104"; }
+.icon-icon-1:before { content: "\f105"; }
+.icon-icon-2:before { content: "\f106"; }
+.icon-icon-3:before { content: "\f107"; }
+.icon-icon-4:before { content: "\f108"; }
+.icon-icon-5:before { content: "\f109"; }
+.icon-icon-6:before { content: "\f10a"; }
+.icon-icon-7:before { content: "\f10b"; }
+.icon-icon-8:before { content: "\f10c"; }
+.icon-icon-9:before { content: "\f10d"; }
+.icon-icon-circle:before { content: "\f10e"; }
+.icon-insta:before { content: "\f10f"; }
+.icon-logo-1:before { content: "\f110"; }
+.icon-logo-2:before { content: "\f111"; }
+.icon-minus:before { content: "\f112"; }
+.icon-person:before { content: "\f113"; }
+.icon-pin:before { content: "\f114"; }
+.icon-plus:before { content: "\f115"; }
+.icon-quote-bottom:before { content: "\f116"; }
+.icon-quote-top:before { content: "\f117"; }
+.icon-scroll:before { content: "\f118"; }
+.icon-vk:before { content: "\f119"; }

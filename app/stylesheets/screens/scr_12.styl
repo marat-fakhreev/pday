@@ -1,17 +1,37 @@
 #screen-twelve
   .photoalbum
     height: 415px
-    width: 50000px
+    width: 100%
     background-color: $blueColor
+    position: relative
+
+    &:hover
+      .left-button
+      .right-button
+        opacity: 1
+        transition: all 0.5s ease
+
+    .left-button
+    .right-button
+      opacity: 0
+      width: 50px
+      height: 100%
+      position: absolute
+      z-index: 50
+      background-color: rgba(#fff, 0.5)
+      cursor: pointer
+      transition: all 0.5s ease
+
+    .left-button
+      left: 0
+
+    .right-button
+      right: 0
 
     .photoalbum-inner
+      width: 50000px
       display: inline-block
-      cursor: pointer
-
-      &:active
-        cursor: move
-        cursor: -moz-grabbing
-        cursor: -webkit-grabbing
+      position: absolute
 
     img
       float: left

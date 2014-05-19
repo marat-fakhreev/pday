@@ -5,7 +5,6 @@ class App.Views.MainView
   SHORT_HEIGHT = 0
   ITTER = 0
   WIDTH = 0
-  MAX_WIDTH = 0
   DATE = [2014, 5, 21]
 
   constructor: ->
@@ -13,7 +12,6 @@ class App.Views.MainView
     @events()
     @_initReviewList()
     @_setDate()
-    @_initPhotoalbum()
     @count = @ui.photoalbumInner.find('img').length
 
   initUi: ->
@@ -63,7 +61,10 @@ class App.Views.MainView
 
     if self.hasClass('left-button')
       if ITTER > 0
-        WIDTH -= @ui.img.eq(ITTER).width()
+        if ITTER is @count - 2
+          WIDTH -= $(document).width() - @ui.img.eq(-1).width() - @ui.img.eq(-2).width()
+        else
+          WIDTH -= @ui.img.eq(ITTER).width()
         ITTER--
     else if self.hasClass('right-button')
       if ITTER < @count - 2
@@ -72,8 +73,6 @@ class App.Views.MainView
         else
           WIDTH += @ui.img.eq(ITTER).width()
         ITTER++
-
-    console.log ITTER
 
     @ui.photoalbumInner.stop().animate('left': -WIDTH, 300)
 
@@ -121,12 +120,3 @@ class App.Views.MainView
       itter++
 
     @ui.reviewList.height(SHORT_HEIGHT)
-
-  _initPhotoalbum: ->
-    width = 0
-
-    @ui.img.each ->
-      width += $(@).width()
-
-    MAX_WIDTH = width - $(document).width()
-    console.log MAX_WIDTH

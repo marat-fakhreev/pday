@@ -64,7 +64,7 @@ class App.Views.MainView
     if self.hasClass('left-button')
       ITTER-- if ITTER > 0
     else if self.hasClass('right-button')
-      ITTER++ if ITTER < @count
+      ITTER++ if ITTER < @count - 2
 
     for i in [0...ITTER]
       width += @ui.img.eq(i).width()
@@ -124,10 +124,3 @@ class App.Views.MainView
       WIDTH += $(@).width()
 
     WIDTH = WIDTH - $(document).width()
-    # width = @ui.photoalbumInner.width() - $(document).width()
-
-    # @ui.photoalbumInner.draggable axis: 'x', stop: (event, ui) =>
-    #   if ui.position.left > 0
-    #     @ui.photoalbumInner.animate('left': '0px', 300)
-    #   else if ui.position.left < -width
-    #     @ui.photoalbumInner.animate('left': -width, 300)

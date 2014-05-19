@@ -5,6 +5,7 @@ class App.Views.MainView
   SHORT_HEIGHT = 0
   ITTER = 0
   WIDTH = 0
+  MAX_WIDTH = 0
   DATE = [2014, 5, 21]
 
   constructor: ->
@@ -59,20 +60,20 @@ class App.Views.MainView
 
   slidePhoto: (event) =>
     self = $(event.currentTarget)
-    width = 0
 
     if self.hasClass('left-button')
-      ITTER-- if ITTER > 0
+      if ITTER > 0
+        WIDTH -= @ui.img.eq(ITTER).width()
+        ITTER--
     else if self.hasClass('right-button')
-      ITTER++ if ITTER < @count - 2
+      if ITTER < @count - 2
+        WIDTH += @ui.img.eq(ITTER).width()
+        ITTER++
 
-    for i in [0...ITTER]
-      width += @ui.img.eq(i).width()
-
-    if width > WIDTH
-      @ui.photoalbumInner.stop().animate('left': -WIDTH, 300)
+    if WIDTH > MAX_WIDTH
+      @ui.photoalbumInner.stop().animate('left': -MAX_WIDTH, 300)
     else
-      @ui.photoalbumInner.stop().animate('left': -width, 300)
+      @ui.photoalbumInner.stop().animate('left': -WIDTH, 300)
 
   registrationForm: (event) =>
     event.preventDefault()
@@ -120,7 +121,9 @@ class App.Views.MainView
     @ui.reviewList.height(SHORT_HEIGHT)
 
   _initPhotoalbum: ->
-    @ui.img.each ->
-      WIDTH += $(@).width()
+    width = 0
 
-    WIDTH = WIDTH - $(document).width()
+    @ui.img.each ->
+      width += $(@).width()
+
+    MAX_WIDTH = width - $(document).width()

@@ -3,8 +3,6 @@ class App.Views.MainView
   LIST_LENGTH = 3
   HEIGHT = 0
   SHORT_HEIGHT = 0
-  ITTER = 0
-  WIDTH = 0
   DATE = [2014, 5, 21]
 
   constructor: ->
@@ -12,7 +10,7 @@ class App.Views.MainView
     @events()
     @_initReviewList()
     @_setDate()
-    @count = @ui.photoalbumInner.find('img').length
+    @_initPhotoalbum()
 
   initUi: ->
     @ui =
@@ -30,20 +28,16 @@ class App.Views.MainView
       reviewList: $('#review_list')
       reviewListItem: $('#review_list li')
       daysCount: $('.days-count')
-      photoalbumInner: $('.photoalbum-inner')
-      img: $('.photoalbum-inner img')
-      photoBtn: $('.p-button')
+      photoalbum: $('#photoalbum')
 
   events: ->
-    @ui.regButton.on 'click', (=> @moveToElem(@ui.regScreen, 150))
-    @ui.aboutButton.on 'click', (=> @moveToElem(@ui.aboutScreen, 0))
-    @ui.presentersButton.on 'click', (=> @moveToElem(@ui.aboutScreen, 1000))
-    @ui.scrollButton.on 'click', (=> @moveToElem(@ui.scrollScreen, 0))
+    @ui.regButton.on 'click', (=> @moveToElement(@ui.regScreen, 150))
+    @ui.aboutButton.on 'click', (=> @moveToElement(@ui.aboutScreen, 0))
+    @ui.presentersButton.on 'click', (=> @moveToElement(@ui.aboutScreen, 1000))
+    @ui.scrollButton.on 'click', (=> @moveToElement(@ui.scrollScreen, 0))
     @ui.reviewShowButton.on 'click', @showReviews
-    @ui.photoBtn.on 'click', @slidePhoto
-    # @ui.form.on 'submit', @registrationForm
 
-  moveToElem: (element, height) ->
+  moveToElement: (element, height) ->
     @ui.body.animate(scrollTop: @_getFromTop(element, height), MOVING_DURATION, 'easeInOutCirc')
 
   showReviews: =>
@@ -55,42 +49,6 @@ class App.Views.MainView
     else
       @ui.reviewShowButton.html('Раскрыть все отзывы')
       @ui.reviewList.animate(height: SHORT_HEIGHT, 700)
-
-  slidePhoto: (event) =>
-    self = $(event.currentTarget)
-
-    if self.hasClass('left-button')
-      if ITTER > 0
-        if ITTER is @count - 2
-          WIDTH -= $(document).width() - @ui.img.eq(-1).width() - @ui.img.eq(-2).width()
-        else
-          WIDTH -= @ui.img.eq(ITTER).width()
-        ITTER--
-    else if self.hasClass('right-button')
-      if ITTER < @count - 2
-        if ITTER is @count - 3
-          WIDTH += $(document).width() - @ui.img.eq(-1).width() - @ui.img.eq(-2).width()
-        else
-          WIDTH += @ui.img.eq(ITTER).width()
-        ITTER++
-
-    @ui.photoalbumInner.stop().animate('left': -WIDTH, 300)
-
-  registrationForm: (event) =>
-    event.preventDefault()
-    flag = true
-    data = {}
-
-    @ui.field.each ->
-      flag = false if $(@).val() is ''
-
-    if flag
-      @ui.field.each ->
-        self = $(@)
-        data[self.attr('name')] = self.val()
-      new App.Models.RegistrationModel(data)
-    else
-      alert('Пожалуйста заполните все поля!')
 
   _getFromTop: (element, height) ->
     element.offset().top + height
@@ -120,3 +78,6 @@ class App.Views.MainView
       itter++
 
     @ui.reviewList.height(SHORT_HEIGHT)
+
+  _initPhotoalbum: ->
+    @ui.photoalbum.smoothTouchScroll()

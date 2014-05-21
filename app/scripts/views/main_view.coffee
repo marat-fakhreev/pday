@@ -3,6 +3,7 @@ class App.Views.MainView
   LIST_LENGTH = 3
   HEIGHT = 0
   SHORT_HEIGHT = 0
+  MARGIN_BOTTOM = 40
   DATE = [2014, 5, 21]
 
   constructor: ->
@@ -111,11 +112,12 @@ class App.Views.MainView
     itter = 1
 
     @ui.reviewListItem.each ->
-      HEIGHT += $(@).height() + 40
+      HEIGHT += $(@).height() + MARGIN_BOTTOM
       SHORT_HEIGHT = HEIGHT if itter is LIST_LENGTH
       itter++
 
     @ui.reviewList.height(SHORT_HEIGHT)
 
   _initPhotoalbum: ->
-    @ui.photoalbum.smoothTouchScroll()
+    @ui.photoalbum.imagesReady =>
+      @ui.photoalbum.smoothTouchScroll()

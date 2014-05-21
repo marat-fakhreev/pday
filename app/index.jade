@@ -5,6 +5,8 @@ html
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=0.3')
+    meta(property="fb:admins", content="1695571811")
+    meta(property="fb:app_id", content="{YOUR_APPLICATION_ID}")
     title Практика Days
     | <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
     | <link rel="stylesheet" href="/stylesheets/fontcustom.css">
@@ -14,6 +16,7 @@ html
     | <script type='text/javascript' src='/scripts/libs/jquery-ui-1.10.3.custom.min.js'></script>
     | <script type='text/javascript' src='/scripts/libs/jquery.kinetic.min.js'></script>
     | <script type='text/javascript' src='/scripts/libs/jquery.smoothTouchScroll.min.js'></script>
+    | <script type='text/javascript' src='/scripts/libs/jquery.images-ready.js'></script>
     | <script type='text/javascript' src='/scripts/libs/jquery.easing.1.3.js'></script>
     | <script type='text/javascript' src='/scripts/libs/moment.min.js'></script>
     //- additional scripts
@@ -25,9 +28,8 @@ html
     | <script type='text/javascript' src='/scripts/views/main_view.js'></script>
 
   body
-    //- #fb-root
-    //- | <script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version.."; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
-
+    | <div id="fb-root"></div>
+    | <script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.0";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
     .pop-up#call_form
       .pop-up-inner
         .close-pop-up &times;
@@ -841,10 +843,10 @@ html
             //- vk module
             div.vk
               div(id="vk_comments")
-              | <script type="text/javascript">VK.Widgets.Comments("vk_comments", {limit: 20, width: "520", attach: "*"});</script>
+              | <script type="text/javascript">VK.Widgets.Comments("vk_comments", {limit: 10, width: "400", attach: "*"});</script>
             //- fb module
             div.fb
-              div(id="#fb_comments" class="fb-comments", data-href="http://example.com/comments", data-numposts="5", data-colorscheme="light")
+              | <div class="fb-comments" data-href="http://praktikadays.ru/" data-width="400" data-numposts="10" data-colorscheme="light"></div>
           .partners
             div(class="partner-logo logo-1")
               div(class='logo-part-one icon-logo-1')

@@ -5,7 +5,6 @@ html
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=0.3')
-    //- meta(property="fb:admins", content="248496178670203")
     title Практика Days
     | <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
     | <link rel="stylesheet" href="/stylesheets/fontcustom.css">
@@ -19,15 +18,50 @@ html
     | <script type='text/javascript' src='/scripts/libs/jquery.easing.1.3.js'></script>
     | <script type='text/javascript' src='/scripts/libs/moment.min.js'></script>
     //- additional scripts
-    //- | <script src="//vk.com/js/api/openapi.js" type="text/javascript" charset="windows-1251"></script>
-    //- | <script type="text/javascript">VK.init({apiId: 4371199, onlyWidgets: true});</script>
+    | <script src="//vk.com/js/api/openapi.js" type="text/javascript" charset="windows-1251"></script>
+    | <script type="text/javascript">VK.init({apiId: 4373961, onlyWidgets: true});</script>
     //- app scripts
     | <script type='text/javascript' src='/scripts/app.js'></script>
+    | <script type='text/javascript' src='/scripts/models/form.js'></script>
     | <script type='text/javascript' src='/scripts/views/main_view.js'></script>
 
   body
     //- #fb-root
     //- | <script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version.."; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+
+    .pop-up#call_form
+      .pop-up-inner
+        .close-pop-up &times;
+        form
+          h2 Связаться с организатором
+          p
+            | Оставьте нам свой контактный телефон и мы свяжемся с вами в ближайшее время. Также вы можете позвонить нам на +7 (495) 726-09-39
+          .field
+            label Ваше Имя:
+            input(type="name" name="Имя")
+          .field
+            label Телефон:
+            input(type="tel" name="Телефон")
+          input(type="submit" value="Продолжить")
+
+
+    .pop-up#partner_form
+      .pop-up-inner
+        .close-pop-up &times;
+        form
+          h2.partner-h2 Стать партнером
+          .field
+            label Ваше Имя:
+            input(type="name" name="Имя")
+          .field
+            label Название компании:
+            input(type="name" name="Компания")
+          .field
+            label Телефон:
+            input(type="tel" name="Телефон")
+          input(type="submit" value="Отправить заявку")
+
+
     section#screen-one(class='block blue-block')
       .block-color
         .svg-section
@@ -406,7 +440,7 @@ html
               .partner
               span Retail Rocket
           li
-            a(href="#" target="blank")
+            a(href="http://www.insales.ru/" target="blank")
               .partner
               span Flocktory
           li
@@ -414,11 +448,11 @@ html
               .partner
               span InSales
           li
-            a(href="#" target="blank")
+            a(href="http://pr.sape.ru/" target="blank")
               .partner
               span Pr.Sare
         .button-block
-          a(class="button" href="/partners") Cтать партнером
+          a(class="button pop-up-button" id="partner_button") Cтать партнером
           a(class="button" href="/partners") Все партнеры
 
 
@@ -508,6 +542,7 @@ html
           img(src='../images/photo/16.jpg')
           img(src='../images/photo/17.jpg')
           img(src='../images/photo/18.jpg')
+
 
     section#screen-thirteen(class='block white-block')
       .svg-section
@@ -760,6 +795,7 @@ html
             div(class='payu-part-two icon-PUlogob')
             span Официальный партнер
 
+
     section#screen-eighteen(class='block blue-block registration-screen')
       .svg-section
         svg(height="600" width="270")
@@ -782,7 +818,7 @@ html
           line(x1="270" y1="0" x2="0" y2="600")
       .block-inner
         h2 Остались вопросы?
-        .button Связаться с организатором
+        div(class="button pop-up-button" id="call_button") Связаться с организатором
         p
           | Остались вопросы? Воспользуйтесь формой «Связаться с организатором» или позвоните нам по телефону <br> +7 (495) 726-09-39. Мы будем рады ответить на все интересующие вас вопросы по мероприятию. <br><br> Да прибудет с вами высокая конверсия и полная корзина заказов! <br> До встречи на мероприятии!
 
@@ -802,14 +838,14 @@ html
             .icon-quote-bottom
             p
               | Ставлю себе напоминание, что иду на главное практическое мероприятие по <br> интернет-торговле "ПрактикаDays", которое пройдет 21 июня. Да прибудет с нами <br> высокая конверсия. <a target="_blank" href="http://praktikaclub.timepad.ru/event/103158/">http://praktikaclub.timepad.ru/event/103158/</a>
-          //- .social-comment-block
+          .social-comment-block
             //- vk module
             div.vk
-              div#vk_comments
+              div(id="vk_comments")
               | <script type="text/javascript">VK.Widgets.Comments("vk_comments", {limit: 20, width: "520", attach: "*"});</script>
             //- fb module
             div.fb
-              | <div class="fb-comments" data-href="http://example.com/comments" data-numposts="5" data-colorscheme="light"></div>
+              div(id="#fb_comments" class="fb-comments", data-href="http://example.com/comments", data-numposts="5", data-colorscheme="light")
           .partners
             div(class="partner-logo logo-1")
               div(class='logo-part-one icon-logo-1')

@@ -15,13 +15,16 @@ class App.Views.MainView
   initUi: ->
     @ui =
       body: $('body')
-      form: $('#registration_form')
-      field: $('.field input')
+      popupForm: $('.pop-up form')
+      callForm: $('#call_form')
+      partnerForm: $('#partner_form')
       scrollButton: $('.scroll-button')
       scrollScreen: $('.scroll-screen')
       presentersButton: $('.presenters-button')
       aboutButton: $('.about-button')
       aboutScreen: $('.about-screen')
+      popupButton: $('.pop-up-button')
+      closeButton: $('.close-pop-up')
       regButton: $('.reg-button')
       regScreen: $('.registration-screen')
       reviewShowButton: $('#show_list_button')
@@ -36,6 +39,9 @@ class App.Views.MainView
     @ui.presentersButton.on 'click', (=> @moveToElement(@ui.aboutScreen, 1000))
     @ui.scrollButton.on 'click', (=> @moveToElement(@ui.scrollScreen, 0))
     @ui.reviewShowButton.on 'click', @showReviews
+    @ui.popupForm.on 'submit', @submitForm
+    @ui.popupButton.on 'click', @showPopUp
+    @ui.closeButton.on 'click', @closePopUp
 
   moveToElement: (element, height) ->
     @ui.body.animate(scrollTop: @_getFromTop(element, height), MOVING_DURATION, 'easeInOutCirc')
@@ -49,6 +55,38 @@ class App.Views.MainView
     else
       @ui.reviewShowButton.html('Раскрыть все отзывы')
       @ui.reviewList.animate(height: SHORT_HEIGHT, 700)
+
+  showPopUp: (event) =>
+    self = $(event.currentTarget)
+    @ui.body.addClass('fixed')
+
+    if self.is('#call_button')
+      @ui.callForm.addClass('show')
+    else if self.is('#partner_button')
+      @ui.partnerForm.addClass('show')
+
+  closePopUp: =>
+    @ui.callForm.removeClass('show')
+    @ui.partnerForm.removeClass('show')
+    @ui.body.removeClass('fixed')
+
+  submitForm: (event) ->
+    event.preventDefault()
+    self = $(event.currentTarget)
+    $input = self.find('.field input')
+    flag = true
+    data = {}
+
+    $input.each ->
+      flag = false if $(@).val() is ''
+
+    if flag
+      $input.each ->
+        inp = $(@)
+        data[inp.attr('name')] = inp.val()
+      new App.Models.Form(form: self, data: data)
+    else
+      alert('Пожалуйста заполните все поля!')
 
   _getFromTop: (element, height) ->
     element.offset().top + height

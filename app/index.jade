@@ -92,6 +92,12 @@ html
                   a(href="/partners") Партнеры
                 li
                   a(class="about-button") О Нас
+            .likes-button
+              .vk-like
+                | <div id="vk_like"></div>
+                | <script type="text/javascript">VK.Widgets.Like("vk_like", {type: "mini"});</script>
+              .fb-like
+                | <div class="fb-like" data-href="https://praktikadays.ru" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
           .box
             h1
               | Главное практическое мероприятие по интернет-торговле
@@ -437,21 +443,25 @@ html
           | Партнеры мероприятия
         ul
           li
+            a(href="http://payu.ru/" target="blank")
+              .partner
+              span PayU
+          li
             a(href="http://retailrocket.ru/" target="blank")
               .partner
               span Retail Rocket
           li
             a(href="http://www.insales.ru/" target="blank")
               .partner
-              span Flocktory
-          li
-            a(href="http://www.insales.ru/" target="blank")
-              .partner
               span InSales
           li
-            a(href="http://pr.sape.ru/" target="blank")
+            a(href="http://www.sociomantic.ru/" target="blank")
               .partner
-              span Pr.Sare
+              span Sociomantic
+          li
+            a(href="http://shop-logistics.ru/" target="blank")
+              .partner
+              span Shoplogistik
         .button-block
           a(class="button pop-up-button" id="partner_button") Cтать партнером
           a(class="button" href="/partners") Все партнеры

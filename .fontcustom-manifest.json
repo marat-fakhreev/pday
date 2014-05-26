@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "0997b55fe32c9a298ef05b33a492cc19e92a1657dfd125e2e728b79b66ee8928",
-    "current": "0997b55fe32c9a298ef05b33a492cc19e92a1657dfd125e2e728b79b66ee8928"
+    "previous": "8f041e9037857c833315d5eb34482a8d961b3481e9b27b3e382f8e120ca5103e",
+    "current": "8f041e9037857c833315d5eb34482a8d961b3481e9b27b3e382f8e120ca5103e"
   },
   "fonts": [
     "app/fonts/fontcustom.ttf",
@@ -133,7 +133,7 @@
       "preview": "app"
     },
     "preprocessor_path": "",
-    "quiet": false,
+    "quiet": true,
     "templates": [
       "css",
       "preview"

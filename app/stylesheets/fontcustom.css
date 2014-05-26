@@ -49,7 +49,7 @@
 .icon-quote-top:before,
 .icon-scroll:before,
 .icon-vk:before {
-  display: inline-block;
+/*  display: inline-block;*/
   font-family: "fontcustom";
   font-style: normal;
   font-weight: normal;

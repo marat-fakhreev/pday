@@ -15,7 +15,7 @@ class App.Views.MainView
 
   initUi: ->
     @ui =
-      body: $('body')
+      body: $('body, html')
       popupForm: $('.pop-up form')
       callForm: $('#call_form')
       partnerForm: $('#partner_form')

@@ -11,6 +11,7 @@ class App.Views.MainView
     @events()
     @_initReviewList()
     @_setDate()
+    @_detectBrowser()
     @_initPhotoalbum()
 
   initUi: ->
@@ -121,3 +122,18 @@ class App.Views.MainView
   _initPhotoalbum: ->
     @ui.photoalbum.imagesReady =>
       @ui.photoalbum.smoothTouchScroll()
+
+  _detectBrowser: ->
+    if $.browser.mozilla
+      if @_osDetection() isnt 'MacOS'
+        @ul.body.addClass('mozilla')
+
+  _osDetection: ->
+    OSName = undefined
+
+    if (navigator.appVersion.indexOf('Win') isnt -1) then OSName = 'Windows'
+    if (navigator.appVersion.indexOf('Mac') isnt -1) then OSName = 'MacOS'
+    if (navigator.appVersion.indexOf('X11') isnt -1) then OSName = 'UNIX'
+    if (navigator.appVersion.indexOf('Linux') isnt -1) then OSName = 'Linux'
+
+    OSName

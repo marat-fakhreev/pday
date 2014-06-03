@@ -17,6 +17,7 @@ class App.Views.MainView
   initUi: ->
     @ui =
       body: $('body, html')
+      onlyBody: $('body')
       popupForm: $('.pop-up form')
       callForm: $('#call_form')
       partnerForm: $('#partner_form')
@@ -125,8 +126,8 @@ class App.Views.MainView
 
   _detectBrowser: ->
     if $.browser.mozilla
-      if @_osDetection() isnt 'MacOS'
-        @ul.body.addClass('mozilla')
+      if @_osDetection() is 'MacOS'
+        @ui.onlyBody.addClass('mozilla')
 
   _osDetection: ->
     OSName = undefined

@@ -5,20 +5,27 @@ html
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=0.3')
-    title P-day
+    meta(property="fb:admins", content="1695571811")
+    meta(property="fb:app_id", content="{YOUR_APPLICATION_ID}")
+    title Практика Days
     | <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
     | <link rel="stylesheet" href="/stylesheets/fontcustom.css">
     | <link rel="stylesheet" href="/stylesheets/style.css">
-
+    //- libraries
     | <script type='text/javascript' src='/scripts/libs/jquery-2.1.1.min.js'></script>
     | <script type='text/javascript' src='/scripts/libs/jquery.browser.min.js'></script>
+    | <script type='text/javascript' src='/scripts/libs/jquery-ui-1.10.3.custom.min.js'></script>
+    | <script type='text/javascript' src='/scripts/libs/jquery.kinetic.min.js'></script>
+    | <script type='text/javascript' src='/scripts/libs/jquery.smoothTouchScroll.min.js'></script>
+    | <script type='text/javascript' src='/scripts/libs/jquery.images-ready.js'></script>
     | <script type='text/javascript' src='/scripts/libs/jquery.easing.1.3.js'></script>
-    | <script type='text/javascript' src='/scripts/libs/jquery-ui-1.10.4.custom.js'></script>
+    | <script type='text/javascript' src='/scripts/libs/moment.min.js'></script>
     //- additional scripts
     | <script src="//vk.com/js/api/openapi.js" type="text/javascript" charset="windows-1251"></script>
     | <script type="text/javascript">VK.init({apiId: 4373980, onlyWidgets: true});</script>
     //- app scripts
     | <script type='text/javascript' src='/scripts/app.js'></script>
+    | <script type='text/javascript' src='/scripts/models/form.js'></script>
     | <script type='text/javascript' src='/scripts/views/main_view.js'></script>
 
   body
@@ -35,7 +42,7 @@ html
             line(x1="2700" y1="0" x2="0" y2="6000")
         .block-inner
           header.header
-            .logo
+            a(href='/' class='logo')
               div(class='logo-part-one icon-logo-1')
               div(class='logo-part-two icon-logo-2')
             ul.social
@@ -76,11 +83,12 @@ html
               h4 PayU
               a(target="_blank" href="http://payu.ru") http://payu.ru
               p
+                | PayU – первый в России международный платежный интегратор, позволяющий осуществлять платежи в интернет-магазинах с использованием популярных средств онлайн-оплаты (банковских карт, электронных кошельков, мобильного телефона, интернет-банка).<br>PayU – успешная работа в 21 стране мира, на 4-х континентах. Более 25 000 подключенных интернет-магазинов. В настоящее время сервис позволяет подключить к любой торговой площадке все самые популярные системы электронных платежей, существующие в России и мире.<br>PayU входит в состав Allegro Group Russia и международного холдинга Naspers, являющегося акционером самых известных мировых интернет-проектов, включая Молоток.Ру. в России. В 2012 году компания PayU признана лучшей платежной системой Польши, Турции и Румынии.
           li
             .circle-block
               .circle
                 img(src="images/partner_logos/2.jpg")
-              span Генеральный партнер
+              span Официальный партнер
             .text-block
               h4 Retailrocket
               a(target="_blank" href="http://retailrocket.ru") http://retailrocket.ru
@@ -90,16 +98,17 @@ html
             .circle-block
               .circle
                 img(src="images/partner_logos/3.jpg")
-              span Генеральный партнер
+              span Официальный партнер
             .text-block
               h4 InSales
               a(target="_blank" href="http://www.insales.ru") http://www.insales.ru
               p
+                | InSales.ru – российская платформа для создания интернет-магазинов. На начало 2014 года число интернет-магазинов на платформе InSales.ru превысило 3500 работающих бизнесов из России, Украины, Казахстана и США. Магазины на InSales.ru обработали в 2013 году заказов на сумму более 6 млрд рублей. Суммарная посещаемость магазинов на начало 2014 года составила более 500 000 визитов в сутки, что превышает посещаемость большинства лидеров онлайн-торговли Рунета. На платформе присутствуют, как небольшие интернет-магазины, так и крупные онлайн-ритейлеры, обрабатывающие более 1000 заказов в сутки.
           li
             .circle-block
               .circle
                 img(src="images/partner_logos/4.jpg")
-              span Генеральный партнер
+              span Официальный партнер
             .text-block
               h4 Sociomantic.ru
               a(target="_blank" href="https://www.sociomantic.ru") https://www.sociomantic.ru
@@ -109,7 +118,7 @@ html
             .circle-block
               .circle
                 img(src="images/partner_logos/5.jpg")
-              span Генеральный партнер
+              span Официальный партнер
             .text-block
               h4 Shoplogistic
               a(target="_blank" href="http://shop-logistics.ru") http://shop-logistics.ru
@@ -170,8 +179,9 @@ html
               span Информационный партнер
             .text-block
               h4 Top Delivery
-              a(target="_blank" href="")
+              a(target="_blank" href="http://www.topdelivery.ru") http://www.topdelivery.ru
               p
+                | TopDelivery – курьерская служба доставки по всей России, предоставляющая услуги интернет-магазинам. География логистической сети компании включает в себя 800 населенных пунктов в 40 регионах России (от Москвы до Владивостока), а также 35 городов с пунктами самовывоза. TopDelivery предлагает высококачественный сервис как для интернет-магазинов, так и для их покупателей, включающий в себя уникальную IT-систему для работы, расширенную систему оповещения для получателей (по телефону, SMS и электронной почте), прием наличных денежных средств, бесплатную примерку и многое другое.
           li
             .circle-block
               .circle
@@ -241,3 +251,44 @@ html
               a(target="_blank" href="http://smallbusiness.ru") http://smallbusiness.ru
               p
                 | Портал предпринимателей SMALLBUSINESS.RU создан в 2009 году как информационная площадка для представителей малого и среднего бизнеса в России, оказывающая поддержку начинающим предпринимателям. Сегодня SMALLBUSINESS.RU — это открытый справочно-информационный ресурс, позволяющий своевременно получать необходимую информацию из области бизнеса и финансов. Портал сотрудничает уже более чем с 200 партнерами, в том числе профильными государственными структурами и организациями в сфере поддержки малого и среднего предпринимательства в различных регионах страны, регулярно обновляется актуальными новостями, авторскими статьями и уникальными интервью с представителями власти, генеральными директорами, руководителями, HR-специалистами и другими экспертами, которые откровенно делятся своим трудовым опытом и бизнес-успехами.
+          li
+            .circle-block
+              .circle
+                img(src="images/partner_logos/19.jpg")
+              span Информационный партнер
+            .text-block
+              h4 1GB.ru
+              a(target="_blank" href="http://www.1gb.ru") http://www.1gb.ru
+              p
+                | Хостинг 1Gb.ru - популярный хостинг для сайтов любой посещаемости. Забота о клиенте, гибкие тарифы, выделенные серверы, облачные технологии. 12 лет на рынке.
+          li
+            .circle-block
+              .circle
+                img(src="images/partner_logos/20.jpg")
+              span Информационный партнер
+            .text-block
+              h4 Московский Клуб Молодых Предпринимателей
+              a(target="_blank" href="http://www.mosmp.ru") http://www.mosmp.ru
+              p
+                | Московский Клуб Молодых Предпринимателей – это не молодежное движение, не общественная организация и не политическое объединение. Клуб Молодых Предпринимателей – это закрытое бизнес-сообщество молодых и успешных предпринимателей, основной целью которого является помощь в развитии существующего бизнеса Членов Клуба и создании новых бизнес - проектов.<br>Московский Клуб Молодых Предпринимателей создан в 2007 году и является самым крупным молодежным бизнес - сообществом г. Москвы,   на данный момент в Клубе состоит более 1300 молодых и успешных предпринимателей.
+          li
+            .circle-block
+              .circle
+                img(src="images/partner_logos/21.jpg")
+              span Информационный партнер
+            .text-block
+              h4 Runet-id.com
+              a(target="_blank" href="http://runet-id.com") http://runet-id.com
+              p
+                | RUNET-ID — крупнейший российский интернет-ресурс, посвященный отечественной интернет-отрасли. В новой версии портал объединил в себе календарь основных мероприятий Рунета, отраслевое СМИ, видео, а также базу вакансий в интернет-компаниях. Сегодня на портале зарегистрировано порядка 200 тысяч профессионалов IT, медиа и бизнеса. Обновленный проект предлагает своим посетителям более удобную структуру, которая соберет все необходимые интернет-профессионалу разделы в рамках одной сетевой площадки.
+          li
+            .circle-block
+              .circle
+                img(src="images/partner_logos/22.jpg")
+              span Информационный партнер
+            .text-block
+              h4 Новые линии продвижения
+              a(target="_blank" href="http://www.nlp-marketing.ru") http://www.nlp-marketing.ru
+              p
+                | Агентство интернет-маркетинга «Новые линии продвижения» – это ваш проводник в мире возможностей современного Интернета. Наша компания – устойчивый и надежный партнер для успешного ведения бизнеса. Мы используем только доказавшие свою эффективность способы рекламы в Интернете, ведь сегодня от того, как вы представлены в сети, напрямую зависят прибыли и репутация. Наша миссия – разработка новых методов и инструментов для продвижения сайтов, поиск новых возможностей для того, чтобы при меньших затратах добиваться большей эффективности от рекламы в Интернете. Мы максимально ориентированы на интересы наших клиентов, предлагаем им самые передовые технологии и являемся их «проводниками» в мир возможностей современного Интернета.
+

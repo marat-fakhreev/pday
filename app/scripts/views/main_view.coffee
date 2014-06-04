@@ -126,7 +126,7 @@ class App.Views.MainView
 
   _detectBrowser: ->
     if $.browser.mozilla
-      if @_osDetection() is 'MacOS'
+      if @_osDetection() isnt 'MacOS'
         @ui.onlyBody.addClass('mozilla')
 
   _osDetection: ->

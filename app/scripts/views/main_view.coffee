@@ -100,12 +100,16 @@ class App.Views.MainView
     daysCount = targetDate.diff(today, 'days')
     lastChar = daysCount.toString().slice(-1)
 
-    if lastChar is '1'
-      text = 'день'
-    else if lastChar is '2' or lastChar is '3' or lastChar is '4'
-      text = 'дня'
-    else
+    if daysCount <= 0
+      daysCount = 0
       text = 'дней'
+    else
+      if lastChar is '1'
+        text = 'день'
+      else if lastChar is '2' or lastChar is '3' or lastChar is '4'
+        text = 'дня'
+      else
+        text = 'дней'
 
     @ui.daysCount.find('span').html(daysCount)
     @ui.daysCount.find('p').html(text)
